@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achmad Dzakkir Waspodo | Portofolio</title>
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Poppins untuk tampilan modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Konfigurasi Tema Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#E63946',   /* Merah Modern */
+                            dark: '#111111',  /* Hitam Elegan */
+                            light: '#F8F9FA', /* Abu-abu sangat terang */
+                            gray: '#4B5563'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Efek transisi halus tambahan */
+        .hover-scale {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(230, 57, 70, 0.15), 0 10px 10px -5px rgba(230, 57, 70, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-dark bg-brand-light selection:bg-brand-red selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="text-2xl font-bold tracking-tighter text-brand-dark">
+                    DZAKKIR<span class="text-brand-red">.</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-sm font-semibold text-brand-gray hover:text-brand-red transition-colors">HOME</a>
+                    <a href="#about" class="text-sm font-semibold text-brand-gray hover:text-brand-red transition-colors">ABOUT ME</a>
+                    <a href="#projects" class="text-sm font-semibold text-brand-gray hover:text-brand-red transition-colors">PROJECTS</a>
+                    <a href="#contact" class="text-sm font-semibold text-brand-gray hover:text-brand-red transition-colors">CONTACT</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark hover:text-brand-red focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="flex flex-col px-6 py-4 space-y-4 shadow-lg">
+                <a href="#home" class="text-brand-dark font-medium hover:text-brand-red">HOME</a>
+                <a href="#about" class="text-brand-dark font-medium hover:text-brand-red">ABOUT ME</a>
+                <a href="#projects" class="text-brand-dark font-medium hover:text-brand-red">PROJECTS</a>
+                <a href="#contact" class="text-brand-dark font-medium hover:text-brand-red">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Home Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 bg-brand-red text-white relative overflow-hidden">
+        <!-- Abstract Background Decoration -->
+        <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-white opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[30rem] h-[30rem] rounded-full bg-black opacity-10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
+            <div class="max-w-4xl">
+                <p class="text-xl md:text-2xl font-medium mb-4 tracking-wide opacity-90">Halo, saya</p>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+                    ACHMAD DZAKKIR <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">WASPODO</span>
+                </h1>
+                
+                <div class="flex flex-wrap gap-3 mt-8 mb-12">
+                    <span class="px-4 py-2 border border-white/30 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm">Graphic Desainer</span>
+                    <span class="px-4 py-2 border border-white/30 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm">Video Editor</span>
+                    <span class="px-4 py-2 border border-white/30 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm">Social Media Specialist</span>
+                    <span class="px-4 py-2 border border-white/30 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm">Fotografer</span>
+                    <span class="px-4 py-2 border border-white/30 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm">Health Educator</span>
+                </div>
+
+                <a href="#projects" class="inline-flex items-center gap-2 bg-white text-brand-red font-bold py-4 px-8 rounded-full hover:bg-gray-100 hover:shadow-lg transition-all">
+                    Lihat Karya Saya <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-brand-light relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- About Text -->
+                <div>
+                    <div class="inline-block mb-4 border-b-2 border-brand-red pb-1">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">ABOUT ME</h2>
+                    </div>
+                    <p class="text-lg text-brand-gray leading-relaxed mb-8">
+                        Seorang lulusan Sarjana Terapan Promosi Kesehatan yang berfokus pada strategi komunikasi kesehatan publik yang terampil dalam merancang konten edukatif visual dan mengelola media sosial, serta seorang yang terbiasa mengorganisir logistik hingga kegiatan kelompok secara terstruktur.
+                    </p>
+                    
+                    <a href="#contact" class="inline-flex items-center gap-2 text-brand-red font-semibold hover:text-brand-dark transition-colors">
+                        Let's Work Together <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Education Card -->
+                <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-gray-100 hover-scale">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-brand-red text-white rounded-xl flex items-center justify-center text-xl shadow-md">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark">Pendidikan</h3>
+                    </div>
+                    
+                    <div class="border-l-2 border-brand-red pl-6 ml-6 relative">
+                        <div class="absolute w-4 h-4 bg-brand-red rounded-full -left-[9px] top-0 border-4 border-white"></div>
+                        <h4 class="text-xl font-bold text-brand-dark">D4 Sarjana Terapan Promosi Kesehatan</h4>
+                        <p class="text-brand-red font-semibold mb-2">Poltekkes Kemenkes Malang</p>
+                        <p class="text-sm text-gray-500 font-medium mb-4">2022 - 2026</p>
+                        
+                        <div class="bg-brand-light rounded-lg p-4 inline-block mb-4">
+                            <p class="font-bold text-brand-dark text-lg">IPK : <span class="text-brand-red">3.77</span></p>
+                        </div>
+                        
+                        <p class="text-brand-gray text-sm leading-relaxed">
+                            <i class="fas fa-star text-brand-red mr-2"></i>Pernah menjadi Koordinator Divisi Kominfo Himpunan Mahasiswa Prodi periode 2024/2025.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4 border-b-2 border-brand-red pb-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark uppercase">Karya & Projects</h2>
+                </div>
+                <p class="text-brand-gray max-w-2xl mx-auto">Kumpulan pengalaman kampanye digital, manajemen acara, dan produksi kreatif media edukasi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Project 1 -->
+                <div class="bg-brand-light rounded-2xl overflow-hidden hover-scale group border border-gray-100 flex flex-col h-full">
+                    <!-- Placeholder visual for project -->
+                    <div class="h-48 bg-gradient-to-r from-gray-200 to-gray-300 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" alt="Instagram Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40"></div>
+                        <i class="fab fa-instagram text-white text-5xl absolute"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brand-red tracking-wider uppercase mb-2">Desainer Feed</span>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3 line-clamp-2">7th MPHEX 2024: The Influence of Adolescent Style on The Increase of Diabetes Mellitus</h3>
+                        <p class="text-brand-gray text-sm mb-6 flex-grow">
+                            Kampanye digital dan publikasi untuk acara besar. Terciptanya identitas visual acara yang konsisten, menarik perhatian peserta (SMA & Mahasiswa), dan alur publikasi berjalan lancar dari pra-acara hingga after movie.
+                        </p>
+                        <a href="https://www.instagram.com/p/DEFKa6Rzc_V/?stkn=eTE1OWR5cGRwa2F3" target="_blank" class="inline-block text-center bg-brand-dark text-white py-3 rounded-xl font-semibold hover:bg-brand-red transition-colors">
+                            <i class="fab fa-instagram mr-2"></i> Lihat Desain
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-brand-light rounded-2xl overflow-hidden hover-scale group border border-gray-100 flex flex-col h-full">
+                    <div class="h-48 bg-gradient-to-r from-gray-200 to-gray-300 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=800" alt="Video Anti Korupsi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40"></div>
+                        <i class="fas fa-play-circle text-white text-5xl absolute"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brand-red tracking-wider uppercase mb-2">Talent, Kameramen & Editor</span>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3 line-clamp-2">Video Kreatif Anti Korupsi "Benih Kelalaian"</h3>
+                        <p class="text-brand-gray text-sm mb-6 flex-grow">
+                            Kampanye Hari Anti Korupsi Sedunia (Hakordia) 2025. Mengedukasi audiens bahwa korupsi berawal dari kebiasaan buruk yang disepelekan. Berhasil meraih <b>Juara 1 Nasional</b> menjangkau >30 ribu audiens.
+                        </p>
+                        <a href="https://www.instagram.com/reel/DDjrMOcTBz6/?stkn=dTlmOXFseXJhb3Fh" target="_blank" class="inline-block text-center bg-brand-dark text-white py-3 rounded-xl font-semibold hover:bg-brand-red transition-colors">
+                            <i class="fab fa-instagram mr-2"></i> Tonton Reels
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-brand-light rounded-2xl overflow-hidden hover-scale group border border-gray-100 flex flex-col h-full">
+                    <div class="h-48 bg-gradient-to-r from-gray-200 to-gray-300 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800" alt="Video Dokumenter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40"></div>
+                        <i class="fab fa-youtube text-white text-5xl absolute"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brand-red tracking-wider uppercase mb-2">Producer & Video Editor</span>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3 line-clamp-2">Produksi Video Kenangan "Semua Berawal dari Sebuah Langkah"</h3>
+                        <p class="text-brand-gray text-sm mb-6 flex-grow">
+                            Video dokumenter/catatan akhir yang merangkum empat tahun perjalanan mahasiswa angkatan 2022. Menjadi karya monumental dengan ratusan views organik yang dikemas secara sinematik.
+                        </p>
+                        <a href="https://youtu.be/n1OrtKex9xY?si=Ajzfg6ewykFju7i0" target="_blank" class="inline-block text-center bg-brand-red text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors">
+                            <i class="fab fa-youtube mr-2"></i> Tonton di YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-brand-light rounded-2xl overflow-hidden hover-scale group border border-gray-100 flex flex-col h-full">
+                    <div class="h-48 bg-gradient-to-r from-gray-200 to-gray-300 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=800" alt="Webinar Operator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40"></div>
+                        <i class="fas fa-video text-white text-5xl absolute"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brand-red tracking-wider uppercase mb-2">Editor Layout & Operator</span>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3 line-clamp-2">Operator Webinar berbasis Zoom (6th MPHEX)</h3>
+                        <p class="text-brand-gray text-sm mb-6 flex-grow">
+                            Pengalaman teknis mengelola & mengeksekusi webinar menggunakan perangkat lunak vMix. Mencakup manajemen tata letak visual, transisi multi-kamera, dan integrasi audio-video real-time profesional.
+                        </p>
+                        <a href="https://youtu.be/jOlMU9XA3OQ?si=P8PdeFOZ5RxtBASc" target="_blank" class="inline-block text-center bg-brand-red text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors">
+                            <i class="fab fa-youtube mr-2"></i> Tonton Webinar
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="bg-brand-dark text-white">
+        <!-- Call To Action Banner -->
+        <div class="bg-brand-red py-16">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Let’s Work Together!</h2>
+                <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Ready to create engaging video content for your brand. If you’re interested in collaborating, feel free to reach out. Let’s build something great together.
+                </p>
+                <a href="mailto:dzakkirachmad181@gmail.com" class="inline-block bg-white text-brand-red font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-colors text-lg shadow-xl">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-800 pb-16">
+                
+                <div class="lg:col-span-2">
+                    <h3 class="text-3xl font-bold mb-4 tracking-tighter">DZAKKIR<span class="text-brand-red">.</span></h3>
+                    <p class="text-gray-400 max-w-sm">
+                        Professional Content Creator, Graphic Designer, dan Video Editor yang berfokus pada hasil karya berkualitas dan edukatif.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white uppercase tracking-wider">Contact Details</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="tel:085745570239" class="text-gray-400 hover:text-white transition-colors flex items-center gap-3">
+                                <i class="fas fa-phone-alt text-brand-red"></i> 0857-4557-0239
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:dzakkirachmad181@gmail.com" class="text-gray-400 hover:text-white transition-colors flex items-center gap-3">
+                                <i class="fas fa-envelope text-brand-red"></i> dzakkirachmad181@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/dzakkir_waspodo" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-3">
+                                <i class="fab fa-instagram text-brand-red"></i> @dzakkir_waspodo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white uppercase tracking-wider">Navigasi</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Me</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center pt-8 text-gray-500 text-sm">
+                <p>&copy; 2026 Achmad Dzakkir Waspodo. All rights reserved.</p>
+                <p class="mt-1">YOU<span class="text-brand-red">THANK</span></p> <!-- Sesuai dengan typo/gaya "YOUTHANK" di slide PPT -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
